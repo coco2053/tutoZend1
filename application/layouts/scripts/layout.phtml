@@ -1,0 +1,36 @@
+<?php
+$this->headMeta()->appendHttpEquiv('Content-Type', 'text/html;charset=utf-8');
+$this->headTitle()->setSeparator(' - ');
+$this->headTitle('Tutoriel Zend Framework');
+
+echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink()->prependStylesheet($this->baseUrl().'/css/site.css'); ?>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column h-100">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a href="" class="navbar-brand">Mon site</a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Fake link</a>
+        </li>
+    </ul>
+</nav>
+<div class="container mt-4">
+
+    <div id="content">
+        <h1><?php echo $this->escape($this->title); ?></h1>
+        <?php echo $this->layout()->content; ?>
+    </div>
+</div>
+<footer class="bg-light py-4 footer mt-auto">
+    <div class="container">
+        Footer
+    </div>
+</footer>
+</body>
+</html>
